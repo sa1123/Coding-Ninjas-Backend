@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en">    
 <head>
   <title>Event Bubbling</title>
 </head>
@@ -9,12 +9,13 @@
   </div>
   <script>
     var parent = document.querySelector('#parent');
-      parent.addEventListener('click', function(){
+      parent.addEventListener('click', function(e){
         console.log("Parent clicked");
       });
     var child = document.querySelector('#child');
-      child.addEventListener('click', function(){
+      child.addEventListener('click', function(e){
         console.log("Child clicked");
+        e.stopPropagation();
       });
   </script>
 </body>
