@@ -114,6 +114,12 @@
 
 #button-clear {
     border-radius: 5px 0 0 0;
+    background-color: orange;
+    color: white;
+}
+
+#button-clear:hover {
+    background-color: #FF7F50;
 }
 
 #button-divide {
