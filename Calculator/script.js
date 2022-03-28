@@ -1,6 +1,8 @@
 var buttons = document.getElementsByClassName("button");
 var display = document.getElementById("display");
 
+var temp = null;
+
 var operand1 = 0;
 var operand2 = null;
 var operator = null;
@@ -18,7 +20,7 @@ for (var i = 0; i < buttons.length; i++) {
         if (isOperator(value)){
             operator = value;
             operand1 = parseFloat(text);
-            display.textContent = "";
+            display.textContent = operand1+operator;
         } else if (value == "ac") {
             display.textContent = "";
         } else if (value == "sign") {
@@ -34,14 +36,14 @@ for (var i = 0; i < buttons.length; i++) {
             operand1 = operand1 / 100;
             display.textContent = operand1;
         } else if (value == "=") {
-            operand2 = parseFloat(text);
+            // operand2 = parseFloat(text);
+            operand2 = parseFloat(display.textContent.split(operator).slice(-1));
+            console.log(operand2)
             var result = eval(operand1 + " " + operator + " " + operand2);
-            if (result) {
-                display.textContent = result;
-                operand1 = result;
-                operand2 = null;
-                operator = null;
-            }
+            display.textContent = result;
+            operand1 = result;
+            operand2 = null;
+            operator = null;
         } else {
             display.textContent += value;
         }
