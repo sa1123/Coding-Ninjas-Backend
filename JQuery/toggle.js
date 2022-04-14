@@ -12,5 +12,6 @@ $("#toggle").click(function(){
         circle.css("margin-left", "1px");
         $("body").css("background-color", "white");
         $("h1").css("color", "black");
+        toggled = false;
     }
 });
