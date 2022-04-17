@@ -3,7 +3,8 @@ function displayImage(data){
     $('<img>', {
         src: data.url,
         height: '100%',
-        width: '100%'
+        width: '100%',
+        alt: data.explanation
     }).appendTo('#image-container');
 }
 
