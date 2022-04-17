@@ -47,6 +47,7 @@ button {
 
 button:hover {
     box-shadow: 0px 0px 30px 2px grey;
+    background-color: lightgreen;
 }
 
 #items {
@@ -62,7 +63,7 @@ button:hover {
     padding: 10px 20px;
 }
 
-.items:nth-child(even) {
+.items:nth-child(even){
     background-color: lightgrey;
 }
 

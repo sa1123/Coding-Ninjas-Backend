@@ -17,7 +17,7 @@ $("form button").click(function(e) {
         alert("please fill all");
     } else {
         
-        let item = '<div class="items">Roll no - <span class="highlights">' + rollVal + '</span> , <span class="highlights">' + nameVal + '<span class="highlights">' + marksVal + '</span> marks</div>';
+        let item = '<div class="items">Roll no - <span class="highlight">' + rollVal + '</span> , <span class="highlight">' + nameVal + '<span class="highlight">' + marksVal + '</span> marks</div>';
 
         items.append(item);
 
