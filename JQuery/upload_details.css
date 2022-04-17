@@ -1,6 +1,7 @@
 body{
     margin: 0;
     height: 600px;
+    background-color: RGBA(142, 209, 178, 1);
 }
 
 form {
@@ -12,11 +13,11 @@ form {
     margin: auto;
     vertical-align: top;
     height: 100%;
-    border-right: 1px solid grey;
 }
 
 form h1 {
     margin-bottom: 50px;
+    font-size: 50px;
 }
 
 form > div {
@@ -25,10 +26,12 @@ form > div {
     width: 50%;
     justify-content: space-between;
     font-size: 1.2rem;
+    border: 1px solid black;
+    background-color: beige;
 }
 
 form label {
-    padding: 5px 0;
+    padding: 5px 10px;
 }
 
 form input {
@@ -55,6 +58,7 @@ button:hover {
     width: 39%;
     overflow: auto;
     height: 100%;
+    background-color: white;
 }
 
 .items {
