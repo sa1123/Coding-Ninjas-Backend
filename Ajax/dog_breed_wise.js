@@ -6,10 +6,8 @@ var dogImage = $("#dog-image")
 $.get('https://dog.ceo/api/breeds/list/all', function (data, status) {
     let breedList = data.message;
     for (let breed in breedList) {
-        console.log(breed);
         dropdown.append('<option value="' + breed + '">' + breed + '</option>');
     }
-    console.log(status)
 });
 
 dropdown.change(function (){
@@ -41,7 +39,6 @@ function displayDog(breed){
 
     $.get(url, function (data, status) {
         let imageUrl = data.message;
-        console.log(data);
         dogImage.append('<img src="' + imageUrl + '" alt="' + breed + '">');
         dogImage.append('<h1>' + breed + '</h1>');
     });
